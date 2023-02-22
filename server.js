@@ -4,6 +4,10 @@ const { sequelize, Airport, Itinerary, Airplane, Flights, Reservation } = requir
 const { check, validationResult, param } = require('express-validator');
 const { Op } = require('sequelize');
 
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 const app = express();
 const port = 3000;
 app.use(bodyParser.json());
@@ -154,6 +158,16 @@ apiRouter.delete('/airport/delete', async (req, res) => {
   
     res.status(200).json({ message: 'Airport deleted' });
   });
+
+
+  /*=========== EJS Code =========*/
+
+  //GET Method
+  apiRouter.get('/airport/all', async (req, res) => {
+    const airports = await Airport.findAll();
+    res.render('index', { airports });
+});
+
   
 
 /*==============================================*/

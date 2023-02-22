@@ -1,0 +1,26 @@
+METHOD: GET
+LINK: http://localhost:3000/api/airport/list
+
+STATUS CODE: 200
+RESULT:
+[
+    {
+        "ID": 1,
+        "Name": "JFK2",
+        "Latitude": 40.6397,
+        "Longitude": -73.7789,
+        "Timezone": "GMT+3",
+        "createdAt": "2023-02-20T19:14:44.158Z",
+        "updatedAt": "2023-02-20T19:15:21.421Z"
+    },
+    {
+        "ID": 2,
+        "Name": "JFK",
+        "Latitude": 40.6397,
+        "Longitude": -73.7789,
+        "Timezone": "GMT-5",
+        "createdAt": "2023-02-20T19:24:09.378Z",
+        "updatedAt": "2023-02-20T19:24:09.378Z"
+    }
+]
+
